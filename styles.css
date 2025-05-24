@@ -1,0 +1,235 @@
+
+@font-face {
+  font-family: 'FuturaCustom';
+  src: url('fonts/Futura.ttf') format('truetype');
+}
+
+body {
+  font-family: 'FuturaCustom', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    font-family: futura;
+}
+h1{
+    font-size: 3rem;
+    height: 15%;
+   background: linear-gradient(90deg,rgba(199, 164, 222, 1) 0%, rgba(255, 255, 20, 1) 53%, rgba(252, 176, 69, 1) 100%);
+    color: rgb(0, 0, 0);
+    line-height: 7rem;
+    font-family: futura;
+
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+     
+}
+.choice{
+
+    height: 200px;
+    width : 200px;
+    margin:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    padding: 10px;
+
+
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #ffff1f;
+    gap: 20px;
+    font-size: 3rem;
+    font-weight: 2px;
+}
+
+.score-board p{
+    font-size: 2rem;
+    color: #ffff1f;
+    text-transform: uppercase;
+    margin: 0;
+}
+#user-score, #comp-score{
+    font-size: 5rem;
+    margin-top: 0.5px;
+    margin-right: 20px;
+    color: yellow;
+    text-transform: uppercase;
+}
+    
+.choice:hover {
+    cursor: pointer;
+    background-color: yellow;
+    border: 5px solid rgb(255, 251, 14);
+}
+
+
+.score-board{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap: 5rem;
+    font-size: 3rem;
+    font-weight: 2px;
+    color: #ffff1f;
+}
+#msg{
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 0.01px;
+
+}
+.msg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#reset{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 56);
+    background-color: rgb(0, 0, 0);
+    display: inline;
+    padding: 4px;
+    
+}
+
+.reset-container{
+    margin-top: 20px;
+    padding: 5px;
+    border: 2px solid rgb(255, 251, 14);
+    border-radius: 5px;
+    display: inline-block;
+}
+.reset-container:hover{
+    cursor: pointer;  
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        padding: 15px 5px;
+        height: auto;
+        margin: 0 0 10px 0;
+        border-radius: 10px;
+    }
+
+    .choices {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+        margin: 0;
+        padding: 5px;
+        border: 3px solid yellow;
+    }
+
+    .choice img {
+        object-fit: contain;
+        padding: 5px;
+    }
+
+    .score-board {
+        gap: 40px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    #user-score, #comp-score {
+        font-size: 3rem;
+    }
+
+    .score-board p {
+        font-size: 1.3rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 12px 15px;
+        margin: 5px auto;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .msg-container {
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    .choice:active {
+        transform: scale(0.95);
+        background-color: rgba(255, 255, 0, 0.3);
+    }
+    #reset-container{
+        padding: 10px;
+        margin: 10px;
+    }
+    #reset {
+        padding: 10px 20px;
+        font-size: 0.5rem;
+        margin-top: 1px;
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 400px) {
+    .choice {
+        height: 110px;
+        width: 110px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    #msg {
+        font-size: 1.1rem;
+    }
+}
